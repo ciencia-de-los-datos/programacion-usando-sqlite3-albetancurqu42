@@ -6,11 +6,7 @@ Calificación del laboratorio
 import sqlite3
 import sys
 
-try:
-    import pandas as pd
-except ImportError as e:
-    print(e)
-    pass  # module doesn't exist, deal with it.
+ # module doesn't exist, deal with it.
 
 
 
@@ -23,6 +19,13 @@ def load_data():
 
     return conn, cur
 
+
+def test_0():
+    try:
+        import pandas as pd
+    except ImportError as e:
+        print(e)
+        pass
 
 def test_01():
     conn, _ = load_data()
@@ -310,6 +313,7 @@ def test_14():
 
 
 test = {
+    '00': test_0,
     "01": test_01,
     "02": test_02,
     "03": test_03,
