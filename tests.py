@@ -5,9 +5,11 @@ Calificación del laboratorio
 
 import sqlite3
 import sys
+import os
 
- # module doesn't exist, deal with it.
+os.system('pip install pandas')
 
+import pandas as pd
 
 
 def load_data():
@@ -19,13 +21,6 @@ def load_data():
 
     return conn, cur
 
-
-def test_0():
-    try:
-        import pandas as pd
-    except ImportError as e:
-        print(e)
-        pass
 
 def test_01():
     conn, _ = load_data()
@@ -313,7 +308,6 @@ def test_14():
 
 
 test = {
-    '00': test_0,
     "01": test_01,
     "02": test_02,
     "03": test_03,
