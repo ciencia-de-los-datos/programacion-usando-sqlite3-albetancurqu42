@@ -2,7 +2,7 @@ CREATE TABLE tbl0 (
     K0  CHAR(1),
     c01 INT,
     c02 INT,
-    c03 CHAR(4),
+    c03 CHAR(5),
     c04 FLOAT
     );
 
@@ -27,7 +27,7 @@ CREATE TABLE tbl2 (
     );
 
 
-INSERT INTO tbl0 VALUES 
+INSERT INTO tbl0 VALUES
     ('A',5000,900,'NMNJL',0.4),
     ('B',7000,100,'OLPKN',0.2),
     ('C',1000,600,'LMMML',0.2),
